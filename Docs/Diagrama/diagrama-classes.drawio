@@ -1,0 +1,124 @@
+<mxfile host="Electron">
+  <diagram id="uml-faculdade" name="Diagrama de Classes - UML 2.5">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1400" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pkg_model" value="model" style="shape=folder;fontStyle=1;tabWidth=90;tabHeight=25;tabPosition=left;html=1;boundedLbl=1;whiteSpace=wrap;fillColor=#F5F7FA;strokeColor=#4A5568;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=10;fontSize=13;fontColor=#2D3748;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="1580" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="pkg_view" value="view" style="shape=folder;fontStyle=1;tabWidth=90;tabHeight=25;tabPosition=left;html=1;boundedLbl=1;whiteSpace=wrap;fillColor=#F8FAFC;strokeColor=#4A5568;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=10;fontSize=13;fontColor=#2D3748;" vertex="1" parent="1">
+          <mxGeometry x="40" y="500" width="1580" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="pkg_ctrl" value="controller" style="shape=folder;fontStyle=1;tabWidth=100;tabHeight=25;tabPosition=left;html=1;boundedLbl=1;whiteSpace=wrap;fillColor=#F8FAFC;strokeColor=#4A5568;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=10;fontSize=13;fontColor=#2D3748;" vertex="1" parent="1">
+          <mxGeometry x="40" y="800" width="1580" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="pkg_dao" value="dao" style="shape=folder;fontStyle=1;tabWidth=90;tabHeight=25;tabPosition=left;html=1;boundedLbl=1;whiteSpace=wrap;fillColor=#F8FAFC;strokeColor=#4A5568;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=10;fontSize=13;fontColor=#2D3748;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1080" width="1580" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="c_pessoa" value="&lt;p style=&quot;margin:0;padding-top:4px;text-align:center;&quot;&gt;&amp;laquo;abstract&amp;raquo;&lt;br&gt;&lt;b&gt;&lt;i&gt;Pessoa&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0 0 0 8px;text-align:left;&quot;&gt;# nome : String&lt;br&gt;# idade : int&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0 0 0 8px;text-align:left;&quot;&gt;+ getNome() : String&lt;br&gt;+ setNome(nome : String) : void&lt;br&gt;+ getIdade() : int&lt;br&gt;+ setIdade(idade : int) : void&lt;/p&gt;" style="rounded=0;verticalAlign=top;overflow=fill;fontSize=12;fontFamily=Helvetica;fillColor=#FFFBEB;strokeColor=#D97706;strokeWidth=1.5;html=1;whiteSpace=wrap;align=center;" vertex="1" parent="1">
+          <mxGeometry x="120" y="80" width="240" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="c_aluno" value="&lt;p style=&quot;margin:0;padding-top:6px;text-align:center;&quot;&gt;&lt;b&gt;Aluno&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0 0 0 8px;text-align:left;&quot;&gt;- matricula : int&lt;br&gt;- curso : Curso&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0 0 0 8px;text-align:left;&quot;&gt;+ getMatricula() : int&lt;br&gt;+ setMatricula(matricula : int) : void&lt;br&gt;+ getCurso() : Curso&lt;br&gt;+ setCurso(curso : Curso) : void&lt;/p&gt;" style="rounded=0;verticalAlign=top;overflow=fill;fontSize=12;fontFamily=Helvetica;fillColor=#EFF6FF;strokeColor=#2563EB;strokeWidth=1.5;html=1;whiteSpace=wrap;align=center;" vertex="1" parent="1">
+          <mxGeometry x="110" y="270" width="260" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="c_curso" value="&lt;p style=&quot;margin:0;padding-top:6px;text-align:center;&quot;&gt;&lt;b&gt;Curso&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0 0 0 8px;text-align:left;&quot;&gt;- codigo : int&lt;br&gt;- nome : String&lt;br&gt;- turno : String&lt;br&gt;- disciplinas : List&amp;lt;Disciplina&amp;gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0 0 0 8px;text-align:left;&quot;&gt;+ getCodigo() : int&lt;br&gt;+ setCodigo(codigo : int) : void&lt;br&gt;+ getNome() : String&lt;br&gt;+ setNome(nome : String) : void&lt;br&gt;+ getTurno() : String&lt;br&gt;+ setTurno(turno : String) : void&lt;br&gt;+ getDisciplinas() : List&amp;lt;Disciplina&amp;gt;&lt;br&gt;+ adicionarDisciplina(d : Disciplina) : void&lt;/p&gt;" style="rounded=0;verticalAlign=top;overflow=fill;fontSize=12;fontFamily=Helvetica;fillColor=#F5F3FF;strokeColor=#7C3AED;strokeWidth=1.5;html=1;whiteSpace=wrap;align=center;" vertex="1" parent="1">
+          <mxGeometry x="670" y="190" width="280" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="c_disciplina" value="&lt;p style=&quot;margin:0;padding-top:6px;text-align:center;&quot;&gt;&lt;b&gt;Disciplina&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0 0 0 8px;text-align:left;&quot;&gt;- codigo : int&lt;br&gt;- nome : String&lt;br&gt;- cargaHoraria : int&lt;br&gt;- curso : Curso&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0 0 0 8px;text-align:left;&quot;&gt;+ getCodigo() : int&lt;br&gt;+ setCodigo(codigo : int) : void&lt;br&gt;+ getNome() : String&lt;br&gt;+ setNome(nome : String) : void&lt;br&gt;+ getCargaHoraria() : int&lt;br&gt;+ setCargaHoraria(ch : int) : void&lt;br&gt;+ getCurso() : Curso&lt;br&gt;+ setCurso(curso : Curso) : void&lt;/p&gt;" style="rounded=0;verticalAlign=top;overflow=fill;fontSize=12;fontFamily=Helvetica;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=1.5;html=1;whiteSpace=wrap;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="190" width="280" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="c_aluno_view" value="&lt;p style=&quot;margin:0;padding-top:4px;text-align:center;&quot;&gt;&amp;laquo;boundary&amp;raquo;&lt;br&gt;&lt;b&gt;AlunoView&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0 0 0 8px;text-align:left;&quot;&gt;&lt;i&gt;&amp;nbsp;&lt;/i&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0 0 0 8px;text-align:left;&quot;&gt;+ Create(aluno : Aluno) : void&lt;br&gt;+ Read() : int&lt;br&gt;+ Update(aluno : Aluno) : void&lt;br&gt;+ Show(aluno : Aluno) : void&lt;br&gt;+ Message(msg : String) : void&lt;/p&gt;" style="rounded=0;verticalAlign=top;overflow=fill;fontSize=12;fontFamily=Helvetica;fillColor=#EFF6FF;strokeColor=#2563EB;strokeWidth=1.2;html=1;whiteSpace=wrap;align=center;" vertex="1" parent="1">
+          <mxGeometry x="110" y="540" width="260" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="c_curso_view" value="&lt;p style=&quot;margin:0;padding-top:4px;text-align:center;&quot;&gt;&amp;laquo;boundary&amp;raquo;&lt;br&gt;&lt;b&gt;CursoView&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0 0 0 8px;text-align:left;&quot;&gt;&lt;i&gt;&amp;nbsp;&lt;/i&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0 0 0 8px;text-align:left;&quot;&gt;+ Create(curso : Curso) : void&lt;br&gt;+ Read() : int&lt;br&gt;+ Update(curso : Curso) : void&lt;br&gt;+ Show(curso : Curso) : void&lt;br&gt;+ ShowAll(cursos : List&amp;lt;Curso&amp;gt;) : void&lt;br&gt;+ Message(msg : String) : void&lt;/p&gt;" style="rounded=0;verticalAlign=top;overflow=fill;fontSize=12;fontFamily=Helvetica;fillColor=#F5F3FF;strokeColor=#7C3AED;strokeWidth=1.2;html=1;whiteSpace=wrap;align=center;" vertex="1" parent="1">
+          <mxGeometry x="680" y="540" width="260" height="185" as="geometry" />
+        </mxCell>
+        <mxCell id="c_disciplina_view" value="&lt;p style=&quot;margin:0;padding-top:4px;text-align:center;&quot;&gt;&amp;laquo;boundary&amp;raquo;&lt;br&gt;&lt;b&gt;DisciplinaView&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0 0 0 8px;text-align:left;&quot;&gt;&lt;i&gt;&amp;nbsp;&lt;/i&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0 0 0 8px;text-align:left;&quot;&gt;+ Create(d : Disciplina) : void&lt;br&gt;+ Read() : int&lt;br&gt;+ Update(d : Disciplina) : void&lt;br&gt;+ Show(d : Disciplina) : void&lt;br&gt;+ Message(msg : String) : void&lt;/p&gt;" style="rounded=0;verticalAlign=top;overflow=fill;fontSize=12;fontFamily=Helvetica;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=1.2;html=1;whiteSpace=wrap;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1260" y="540" width="260" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="c_aluno_ctrl" value="&lt;p style=&quot;margin:0;padding-top:4px;text-align:center;&quot;&gt;&amp;laquo;control&amp;raquo;&lt;br&gt;&lt;b&gt;AlunoController&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0 0 0 8px;text-align:left;&quot;&gt;&lt;i&gt;&amp;nbsp;&lt;/i&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0 0 0 8px;text-align:left;&quot;&gt;+ Create() : void&lt;br&gt;+ Read() : void&lt;br&gt;+ Update() : void&lt;br&gt;+ Delete() : void&lt;/p&gt;" style="rounded=0;verticalAlign=top;overflow=fill;fontSize=12;fontFamily=Helvetica;fillColor=#EFF6FF;strokeColor=#2563EB;strokeWidth=1.2;html=1;whiteSpace=wrap;align=center;" vertex="1" parent="1">
+          <mxGeometry x="110" y="840" width="260" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="c_curso_ctrl" value="&lt;p style=&quot;margin:0;padding-top:4px;text-align:center;&quot;&gt;&amp;laquo;control&amp;raquo;&lt;br&gt;&lt;b&gt;CursoController&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0 0 0 8px;text-align:left;&quot;&gt;&lt;i&gt;&amp;nbsp;&lt;/i&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0 0 0 8px;text-align:left;&quot;&gt;+ Create() : void&lt;br&gt;+ Read() : void&lt;br&gt;+ Update() : void&lt;br&gt;+ Delete() : void&lt;/p&gt;" style="rounded=0;verticalAlign=top;overflow=fill;fontSize=12;fontFamily=Helvetica;fillColor=#F5F3FF;strokeColor=#7C3AED;strokeWidth=1.2;html=1;whiteSpace=wrap;align=center;" vertex="1" parent="1">
+          <mxGeometry x="680" y="840" width="260" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="c_disciplina_ctrl" value="&lt;p style=&quot;margin:0;padding-top:4px;text-align:center;&quot;&gt;&amp;laquo;control&amp;raquo;&lt;br&gt;&lt;b&gt;DisciplinaController&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0 0 0 8px;text-align:left;&quot;&gt;&lt;i&gt;&amp;nbsp;&lt;/i&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0 0 0 8px;text-align:left;&quot;&gt;+ Create() : void&lt;br&gt;+ Read() : void&lt;br&gt;+ Update() : void&lt;br&gt;+ Delete() : void&lt;/p&gt;" style="rounded=0;verticalAlign=top;overflow=fill;fontSize=12;fontFamily=Helvetica;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=1.2;html=1;whiteSpace=wrap;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1260" y="840" width="260" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="c_aluno_dao" value="&lt;p style=&quot;margin:0;padding-top:6px;text-align:center;&quot;&gt;&lt;b&gt;AlunoDAO&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0 0 0 8px;text-align:left;&quot;&gt;&lt;u&gt;+ alunoList : List&amp;lt;Aluno&amp;gt;&lt;/u&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0 0 0 8px;text-align:left;&quot;&gt;+ Create(aluno : Aluno) : void&lt;br&gt;+ Read(matricula : int) : Optional&amp;lt;Aluno&amp;gt;&lt;br&gt;+ Update(aluno : Aluno) : void&lt;br&gt;+ Delete(matricula : int) : boolean&lt;br&gt;+ CreateTable() : void&lt;/p&gt;" style="rounded=0;verticalAlign=top;overflow=fill;fontSize=12;fontFamily=Helvetica;fillColor=#EFF6FF;strokeColor=#2563EB;strokeWidth=1.2;html=1;whiteSpace=wrap;align=center;" vertex="1" parent="1">
+          <mxGeometry x="110" y="1120" width="260" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="c_curso_dao" value="&lt;p style=&quot;margin:0;padding-top:6px;text-align:center;&quot;&gt;&lt;b&gt;CursoDAO&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0 0 0 8px;text-align:left;&quot;&gt;&lt;u&gt;+ cursoList : List&amp;lt;Curso&amp;gt;&lt;/u&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0 0 0 8px;text-align:left;&quot;&gt;+ Create(curso : Curso) : void&lt;br&gt;+ Read(codigo : int) : Optional&amp;lt;Curso&amp;gt;&lt;br&gt;+ Update(curso : Curso) : void&lt;br&gt;+ Delete(codigo : int) : boolean&lt;br&gt;+ ListAll() : List&amp;lt;Curso&amp;gt;&lt;br&gt;+ CreateTable() : void&lt;/p&gt;" style="rounded=0;verticalAlign=top;overflow=fill;fontSize=12;fontFamily=Helvetica;fillColor=#F5F3FF;strokeColor=#7C3AED;strokeWidth=1.2;html=1;whiteSpace=wrap;align=center;" vertex="1" parent="1">
+          <mxGeometry x="680" y="1120" width="260" height="185" as="geometry" />
+        </mxCell>
+        <mxCell id="c_disciplina_dao" value="&lt;p style=&quot;margin:0;padding-top:6px;text-align:center;&quot;&gt;&lt;b&gt;DisciplinaDAO&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0 0 0 8px;text-align:left;&quot;&gt;&lt;u&gt;+ disciplinaList : List&amp;lt;Disciplina&amp;gt;&lt;/u&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0 0 0 8px;text-align:left;&quot;&gt;+ Create(d : Disciplina) : void&lt;br&gt;+ Read(codigo : int) : Optional&amp;lt;Disciplina&amp;gt;&lt;br&gt;+ Update(d : Disciplina) : void&lt;br&gt;+ Delete(codigo : int) : boolean&lt;br&gt;+ ListByCurso(codCurso : int) : List&amp;lt;Disciplina&amp;gt;&lt;br&gt;+ CreateTable() : void&lt;/p&gt;" style="rounded=0;verticalAlign=top;overflow=fill;fontSize=12;fontFamily=Helvetica;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=1.2;html=1;whiteSpace=wrap;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1260" y="1120" width="270" height="185" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_gen_aluno_pessoa" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;strokeWidth=1.5;strokeColor=#D97706;" edge="1" parent="1" source="c_aluno" target="c_pessoa">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_aluno_curso" value="matriculado em" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeWidth=1.5;strokeColor=#2563EB;verticalAlign=bottom;" edge="1" parent="1" source="c_aluno" target="c_curso">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_mult_aluno" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#1E3A8A;" vertex="1" connectable="0" parent="rel_aluno_curso">
+          <mxGeometry x="-0.8" y="-12" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_mult_curso_aluno" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#1E3A8A;" vertex="1" connectable="0" parent="rel_aluno_curso">
+          <mxGeometry x="0.8" y="-12" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_curso_disciplina" value="composto por" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=diamond;startFill=1;endArrow=open;endFill=0;strokeWidth=1.5;strokeColor=#7C3AED;verticalAlign=bottom;" edge="1" parent="1" source="c_curso" target="c_disciplina">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_mult_curso_disp" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#5B21B6;" vertex="1" connectable="0" parent="rel_curso_disciplina">
+          <mxGeometry x="-0.8" y="-12" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_mult_disp" value="1..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#5B21B6;" vertex="1" connectable="0" parent="rel_curso_disciplina">
+          <mxGeometry x="0.8" y="-12" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_ac_av" value="&amp;laquo;use&amp;raquo;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=open;endFill=0;strokeWidth=1.2;strokeColor=#2563EB;" edge="1" parent="1" source="c_aluno_ctrl" target="c_aluno_view">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_ac_ad" value="&amp;laquo;use&amp;raquo;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=open;endFill=0;strokeWidth=1.2;strokeColor=#2563EB;" edge="1" parent="1" source="c_aluno_ctrl" target="c_aluno_dao">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_ac_cd" value="&amp;laquo;use&amp;raquo; lista cursos" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=open;endFill=0;strokeWidth=1.2;strokeColor=#6B7280;" edge="1" parent="1" source="c_aluno_ctrl" target="c_curso_dao">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="430" y="915" />
+              <mxPoint x="430" y="1210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_cc_cv" value="&amp;laquo;use&amp;raquo;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=open;endFill=0;strokeWidth=1.2;strokeColor=#7C3AED;" edge="1" parent="1" source="c_curso_ctrl" target="c_curso_view">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_cc_cd" value="&amp;laquo;use&amp;raquo;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=open;endFill=0;strokeWidth=1.2;strokeColor=#7C3AED;" edge="1" parent="1" source="c_curso_ctrl" target="c_curso_dao">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_dc_dv" value="&amp;laquo;use&amp;raquo;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=open;endFill=0;strokeWidth=1.2;strokeColor=#059669;" edge="1" parent="1" source="c_disciplina_ctrl" target="c_disciplina_view">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_dc_dd" value="&amp;laquo;use&amp;raquo;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=open;endFill=0;strokeWidth=1.2;strokeColor=#059669;" edge="1" parent="1" source="c_disciplina_ctrl" target="c_disciplina_dao">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_dc_cd" value="&amp;laquo;use&amp;raquo; lista cursos" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=open;endFill=0;strokeWidth=1.2;strokeColor=#6B7280;" edge="1" parent="1" source="c_disciplina_ctrl" target="c_curso_dao">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1200" y="915" />
+              <mxPoint x="1200" y="1210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
