@@ -29,7 +29,6 @@ Faculade/
  │   └── mysql-connector-j... # Driver JDBC de conexão com MySQL
  ├── Docs/
  │   ├── README.md            # Enunciado do trabalho
- │   ├── Exemplos/            # Exemplos do professor
  │   └── Diagrama/
  │       └── diagrama-classes.drawio  # Modelagem visual do sistema (UML 2.5)
  └── src/
