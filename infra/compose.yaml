@@ -1,3 +1,5 @@
+name: faculade
+
 services:
   database:
     image: mysql:8.0-debian
