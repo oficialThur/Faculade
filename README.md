@@ -4,7 +4,7 @@ Sistema desenvolvido para a disciplina de **Programação Orientada a Objetos (P
 
 ---
 
-## 🎯 Objetivo do Projeto
+##  Objetivo do Projeto
 
 Atender a todas as premissas acadêmicas propostas:
 - **Gerenciamento Completo (CRUD):** Criar, Consultar, Atualizar e Remover Alunos, Cursos e Disciplinas.
@@ -17,18 +17,21 @@ Atender a todas as premissas acadêmicas propostas:
 
 ---
 
-## 🏛️ Arquitetura e Estrutura do Projeto
+##  Arquitetura e Estrutura do Projeto
 
 O código-fonte segue o padrão oficial da linguagem Java, dividido em pacotes com responsabilidades bem definidas:
 
 ```
 Faculade/
- ├── docker/
+ ├── infra/
  │   └── compose.yaml         # Configuração do MySQL 8 em container (limite < 512MB RAM)
  ├── libs/
  │   └── mysql-connector-j... # Driver JDBC de conexão com MySQL
- ├── diagrama-classes.drawio  # Modelagem visual do sistema (UML 2.5)
- ├── bin/                     # Bytecodes compilados (.class)
+ ├── Docs/
+ │   ├── README.md            # Enunciado do trabalho
+ │   ├── Exemplos/            # Exemplos do professor
+ │   └── Diagrama/
+ │       └── diagrama-classes.drawio  # Modelagem visual do sistema (UML 2.5)
  └── src/
      ├── Main.java            # Ponto de entrada (conecta banco e abre o menu)
      ├── model/               # Entidades de negócio (Pessoa, Aluno, Curso, Disciplina)
@@ -40,7 +43,7 @@ Faculade/
 
 ---
 
-## 🚀 Como Executar o Projeto no IntelliJ IDEA
+##  Como Executar o Projeto no IntelliJ IDEA
 
 ### Pré-requisitos
 - **Java JDK 17** ou superior configurado no IntelliJ.
@@ -51,7 +54,7 @@ Faculade/
 1. **Subir o Banco de Dados:**
    No terminal, suba o container do MySQL:
    ```bash
-   docker compose up -d
+   docker compose -f infra/compose.yaml up -d
    ```
    *(O banco estará disponível em `localhost:3307`)*
 
@@ -68,7 +71,7 @@ Faculade/
 
 ---
 
-## 📋 Navegação no Sistema
+##  Navegação no Sistema
 
 ### Menu Principal
 ```text
@@ -90,7 +93,7 @@ Para respeitar a integridade referencial:
 
 ---
 
-## 💡 Conceitos de POO e Boas Práticas Utilizados
+##  Conceitos de POO e Boas Práticas Utilizados
 
 - **Encapsulamento:** Atributos declarados como `private` ou `protected`, acessíveis via getters e setters com validações.
 - **Herança:** A classe abstrata `Pessoa` concentra nome e idade, herdados por `Aluno` via `extends`.
@@ -102,5 +105,5 @@ Para respeitar a integridade referencial:
 
 ---
 
-## 👥 Autor
+##  Autor
 Arthur Henrique.# Faculade
